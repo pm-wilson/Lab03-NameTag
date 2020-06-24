@@ -33,10 +33,11 @@ body {
 
 .name-input-message {
   text-align: center;
+  margin-top: 20px;
 }
 
 #name-input {
-  margin: auto;
+  margin: 20px auto;
   width: 400px;
 }
 
@@ -85,9 +86,25 @@ body {
 }
 
 .button-container {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  align-self: center;
+  margin: 20px;
 }
 
 .button {
   height: 20px;
-  width: 40px;
+  width: 50px;
+}
+
+#pink {
+  background: pink;
+}
+
+#blue {
+  background: lightblue;
+}
+
+#green {
+  background: lightgreen;
 }
