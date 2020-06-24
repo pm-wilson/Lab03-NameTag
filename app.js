@@ -29,7 +29,15 @@ function changeGreen() {
 }
 
 function onLoad() {
-  const randomNumber = Math.floor(Math.random()) * 3,
-    colors = [changePink(), changeBlue(), changeGreen()],
-    randomColor = colors[randomNumber];
+  const randomNumber = Math.floor(Math.random() * 3);
+
+  if (randomNumber === 0) {
+    changePink();
+  } else if (randomNumber === 1) {
+    changeBlue();
+  } else {
+    changeGreen();
+  }
 }
+
+onLoad();
