@@ -96,6 +96,7 @@ body {
 .button {
   height: 20px;
   width: 50px;
+  border-radius: 5px;
 }
 
 #pink {
@@ -108,4 +109,9 @@ body {
 
 #green {
   background: lightgreen;
+}
+
+.selected {
+  font-weight: bold;
+  transform: scale(1.2);
 }

@@ -13,19 +13,36 @@ function updateName() {
 function changePink() {
   const elementToChange = document.getElementById("color-to-change");
 
+  unSelectAllButtons();
+  selectButton("pink");
   elementToChange.style.background = "pink";
 }
 
 function changeBlue() {
   const elementToChange = document.getElementById("color-to-change");
 
+  unSelectAllButtons();
+  selectButton("blue");
   elementToChange.style.background = "lightblue";
 }
 
 function changeGreen() {
   const elementToChange = document.getElementById("color-to-change");
 
+  unSelectAllButtons();
+  selectButton("green");
   elementToChange.style.background = "lightgreen";
+}
+
+function selectButton(buttonID) {
+  document.getElementById(buttonID).classList.add("selected");
+  console.log("select button");
+}
+
+function unSelectAllButtons() {
+  document.getElementById("pink").classList.remove("selected");
+  document.getElementById("blue").classList.remove("selected");
+  document.getElementById("green").classList.remove("selected");
 }
 
 function onLoad() {
