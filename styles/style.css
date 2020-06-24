@@ -1,0 +1,93 @@
+body {
+  /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
+  --color1: hsla(349, 69%, 76%, 1);
+  --color2: hsla(207, 67%, 44%, 1);
+  --color3: hsla(200, 61%, 56%, 1);
+  --color4: hsla(187, 41%, 94%, 1);
+  --color5: hsla(170, 28%, 95%, 1);
+
+  /* --color1: hsla(45, 86%, 83%, 1);
+    --color2: hsla(135, 65%, 98%, 1);
+    --color3: hsla(315, 37%, 86%, 1);
+    --color4: hsla(45, 73%, 98%, 1);
+    --color5: hsla(224, 40%, 79%, 1); */
+
+  --header-height: 80px;
+  --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
+  --gutter: 30px;
+  --footer-height: 25px;
+
+  font-family: "Titillium Web", sans-serif;
+}
+
+.border {
+  border: solid black 1px;
+}
+
+.name-input-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.name-input-message {
+  text-align: center;
+}
+
+#name-input {
+  margin: auto;
+  width: 400px;
+}
+
+.name-tag-container {
+  margin: auto;
+  width: 600px;
+  height: 450px;
+}
+
+.tag-color-part {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
+}
+
+.name-space {
+  background: white;
+  width: 598px;
+  height: 200px;
+  transform: translate(1px, -250px);
+  text-align: center;
+  font-weight: bold;
+  font-size: 65px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 65px;
+}
+
+.tag-color-part {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.hello-space {
+  font-size: 60px;
+  transform: translate(0px, 55px);
+  letter-spacing: 15px;
+  font-weight: bold;
+}
+
+.hello-space2 {
+  font-size: 15px;
+  transform: translate(0px, 75px);
+}
+
+.button-container {
+}
+
+.button {
+  height: 20px;
+  width: 40px;
+}
