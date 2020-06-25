@@ -4,17 +4,22 @@ const buttonCount = {
   green: 0,
 };
 
-document.getElementById("name-input").addEventListener("keyup", updateName);
-document.getElementById("pink").addEventListener("click", changePink);
-document.getElementById("blue").addEventListener("click", changeBlue);
-document.getElementById("green").addEventListener("click", changeGreen);
-
-function updateName() {
+document.getElementById("name-input").addEventListener("keyup", () => {
   const newName = document.getElementById("name-input").value,
     placeToDisplay = document.getElementById("display-name");
 
-  placeToDisplay.textContent = newName;
-}
+  if (newName.length > 16) {
+    maxCharacter();
+    placeToDisplay.textContent = first16(newName);
+    document.getElementById("name-input").value = first16(newName);
+  } else {
+    placeToDisplay.textContent = newName;
+  }
+});
+
+document.getElementById("pink").addEventListener("click", changePink);
+document.getElementById("blue").addEventListener("click", changeBlue);
+document.getElementById("green").addEventListener("click", changeGreen);
 
 function changePink() {
   const elementToChange = document.getElementById("color-to-change"),
@@ -66,6 +71,7 @@ function updateCount(color) {
 }
 
 function onLoad() {
+  //added extra code to undo initial random color click
   const randomNumber = Math.floor(Math.random() * 3);
 
   if (randomNumber === 0) {
@@ -83,4 +89,19 @@ function onLoad() {
   }
 }
 
+function maxCharacter() {
+  alert("Please choose a name shorter than 16 characters");
+}
+
+function first16(name) {
+  const arrayOfLetters = name.split("");
+  let newName = "";
+
+  for (let i = 0; i < arrayOfLetters.length; i++) {
+    if (i < 16) {
+      newName += arrayOfLetters[i];
+    }
+  }
+  return newName;
+}
 onLoad();

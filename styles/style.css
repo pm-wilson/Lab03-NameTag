@@ -33,12 +33,12 @@ body {
 
 .name-input-message {
   text-align: center;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 #name-input {
   margin: 20px auto;
-  width: 400px;
+  width: 150px;
   text-align: center;
 }
 
